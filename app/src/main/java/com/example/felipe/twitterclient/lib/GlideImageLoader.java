@@ -12,8 +12,8 @@ public class GlideImageLoader implements ImageLoader{
 
     private RequestManager glideRequestManager;
 
-    public GlideImageLoader(RequestManager glideRequestManager) {
-        this.glideRequestManager = glideRequestManager;
+    public GlideImageLoader(Fragment fragment) {
+        this.glideRequestManager = Glide.with(fragment);
     }
 
     @Override
