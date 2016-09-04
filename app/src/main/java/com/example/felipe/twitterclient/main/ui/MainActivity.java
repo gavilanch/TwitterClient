@@ -12,6 +12,8 @@ import android.view.MenuItem;
 
 import com.example.felipe.twitterclient.LoginActivity;
 import com.example.felipe.twitterclient.R;
+import com.example.felipe.twitterclient.hasthtags.HashtagsFragment;
+import com.example.felipe.twitterclient.images.ImagesFragment;
 import com.example.felipe.twitterclient.main.ui.adapters.MainSectionsPagerAdapter;
 import com.twitter.sdk.android.Twitter;
 
@@ -25,7 +27,7 @@ public class MainActivity extends AppCompatActivity {
     @Bind(R.id.tabs)
     TabLayout tabs;
     @Bind(R.id.container)
-    ViewPager container;
+    ViewPager viewPager;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -39,9 +41,11 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void setupAdapter() {
-        Fragment[] fragments = new Fragment[]{};
+        Fragment[] fragments = new Fragment[]{new ImagesFragment(), new HashtagsFragment()};
         String[] titles = new String[]{getString(R.string.main_header_images), getString(R.string.main_header_hashtags)};
         MainSectionsPagerAdapter adapter = new MainSectionsPagerAdapter(getSupportFragmentManager(), titles, fragments);
+        viewPager.setAdapter(adapter);
+        tabs.setupWithViewPager(viewPager);
     }
 
     @Override

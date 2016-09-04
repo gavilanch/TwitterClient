@@ -19,6 +19,11 @@ public class MainSectionsPagerAdapter extends FragmentPagerAdapter {
     }
 
     @Override
+    public CharSequence getPageTitle(int position) {
+        return this.tittles[position];
+    }
+
+    @Override
     public Fragment getItem(int position) {
         return this.fragments[position];
     }
