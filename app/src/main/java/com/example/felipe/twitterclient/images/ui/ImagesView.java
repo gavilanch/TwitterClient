@@ -1,4 +1,4 @@
-package com.example.felipe.twitterclient.images;
+package com.example.felipe.twitterclient.images.ui;
 
 import com.example.felipe.twitterclient.entities.Image;
 

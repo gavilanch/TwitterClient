@@ -13,7 +13,7 @@ import android.view.MenuItem;
 import com.example.felipe.twitterclient.LoginActivity;
 import com.example.felipe.twitterclient.R;
 import com.example.felipe.twitterclient.hasthtags.HashtagsFragment;
-import com.example.felipe.twitterclient.images.ImagesFragment;
+import com.example.felipe.twitterclient.images.ui.ImagesFragment;
 import com.example.felipe.twitterclient.main.ui.adapters.MainSectionsPagerAdapter;
 import com.twitter.sdk.android.Twitter;
 
