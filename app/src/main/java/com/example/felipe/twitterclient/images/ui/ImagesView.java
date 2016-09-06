@@ -8,8 +8,8 @@ import java.util.List;
  * Created by Felipe on 04-Sep-16.
  */
 public interface ImagesView {
-    void showElements();
-    void hideElements();
+    void showImages();
+    void hideImages();
     void showProgressBar();
     void hideProgressBar();
 
