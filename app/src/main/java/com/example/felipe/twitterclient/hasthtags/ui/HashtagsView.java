@@ -7,7 +7,7 @@ import java.util.List;
 /**
  * Created by Felipe on 08-Sep-16.
  */
-public interface HashtagView {
+public interface HashtagsView {
     void showList();
     void hideList();
     void showProgress();
