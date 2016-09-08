@@ -70,7 +70,7 @@ public class ImagesModule {
 
     @Singleton
     @Provides
-    ImagesInteractor providesImagesInteractor(ImagesRepository repository){
+    ImagesInteractor providesImagesRepository(ImagesRepository repository){
         return new ImageInteractorImpl(repository);
     }
 
