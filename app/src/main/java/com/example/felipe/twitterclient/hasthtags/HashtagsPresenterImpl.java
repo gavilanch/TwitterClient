@@ -5,6 +5,8 @@ import com.example.felipe.twitterclient.events.HashtagsEvent;
 import com.example.felipe.twitterclient.hasthtags.ui.HashtagsView;
 import com.example.felipe.twitterclient.lib.base.EventBus;
 
+import org.greenrobot.eventbus.Subscribe;
+
 import java.util.List;
 
 /**
@@ -46,6 +48,7 @@ public class HashtagsPresenterImpl  implements HashtagsPresenter {
     }
 
     @Override
+    @Subscribe
     public void onEventMainThread(HashtagsEvent event) {
         String errorMsg = event.getError();
         if (this.hashtagsView != null) {
